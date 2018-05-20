@@ -71,7 +71,7 @@ $_LANG['wait_please'] = 'UPgrading, please wait...';
 $_LANG['js_error'] = 'Client JavaScript error.';
 $_LANG['create_ver_failed'] = 'Create version object failed';
 $_LANG['goto_charset_convert']  = 'goto:database charset convert';
-$_LANG['goto_members_import']  = 'goto:Import members data form UCenter';
+$_LANG['goto_members_import']  = 'goto:Import members data sms_form UCenter';
 
 /* Client JS language item */
 $_LANG['js_languages']['display_detail'] = 'Display details';

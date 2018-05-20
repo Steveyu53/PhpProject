@@ -46,23 +46,23 @@ if ($step == 1) {
     if (!empty($ecshop_charset) && !empty($mysql_charset) && $ecshop_charset == $mysql_charset) {
         $ext_msg = '<span style="color:red;font-size:14px;font-weight:bold">鎮ㄧ殑绋嬪簭缂栫爜涓庢暟鎹?簱缂栫爜涓€鑷达紝鏃犻渶杩涜?杞?崲銆侟/span><br /><a href="index.php"><font size="2"><b>&gt;&gt;&nbsp;濡傛灉鎮ㄩ渶瑕佹墽琛屽崌绾х▼搴忥紝璇风偣杩欓噷杩涜?鍗囩骇</b></font></a>';
     } elseif(empty($ecshop_charset) && !empty($mysql_charset)) {
-        $ext_msg = '<form name="convert_form" method="post" action="?step=start"><b>鐢变簬鏈?兘纭?畾鎮ㄧ殑绋嬪簭缂栫爜锛岃?缂栫爜鐢辨偍鎵嬪姩纭?畾銆侟/b><br />
+        $ext_msg = '<sms_form name="convert_form" method="post" action="?step=start"><b>鐢变簬鏈?兘纭?畾鎮ㄧ殑绋嬪簭缂栫爜锛岃?缂栫爜鐢辨偍鎵嬪姩纭?畾銆侟/b><br />
                     <b>鎮ㄧ殑鏁版嵁搴撶紪鐮佷负锛欬span style="color:blue">'. $mysql_charset .'</span> 锛岀‘璁ゆ偍鐨勭▼搴忕紪鐮佹槸锛欬span style="color:red">'. $convert_charset[$mysql_charset] .'</span> 鎵嶈兘杩涜?杞?崲</b><br /><br />
-        <a href="###" id="runturn"><font size="2"><b>&gt;&gt;&nbsp;濡傛灉鎮ㄥ凡纭??瀹屾垚涓婇潰鐨勮?鏄?璇风偣杩欓噷杩涜?杞?崲</b></font></a><input type="hidden" name="ecshop_charset" value="'. $convert_charset[$mysql_charset] .'" />&nbsp;&nbsp;&nbsp;&nbsp;<a href="index.php"><font size="2">&gt;&gt;&nbsp;濡傛灉鎮ㄧ‘璁ょ▼搴忎笌鏁版嵁搴撶殑缂栫爜涓€鑷达紝璇风偣杩欓噷杩涜?鍗囩骇</font></a></form>';
+        <a href="###" id="runturn"><font size="2"><b>&gt;&gt;&nbsp;濡傛灉鎮ㄥ凡纭??瀹屾垚涓婇潰鐨勮?鏄?璇风偣杩欓噷杩涜?杞?崲</b></font></a><input type="hidden" name="ecshop_charset" value="'. $convert_charset[$mysql_charset] .'" />&nbsp;&nbsp;&nbsp;&nbsp;<a href="index.php"><font size="2">&gt;&gt;&nbsp;濡傛灉鎮ㄧ‘璁ょ▼搴忎笌鏁版嵁搴撶殑缂栫爜涓€鑷达紝璇风偣杩欓噷杩涜?鍗囩骇</font></a></sms_form>';
         $ecshop_charset = '<span style="color:red">鏈?煡</span>';
     } elseif(empty($mysql_charset) && !empty($ecshop_charset)) {
-        $ext_msg = '<form name="convert_form" method="post" action="?step=start"><b>鐢变簬鏈?兘纭?畾鎮ㄧ殑鏁版嵁搴撶紪鐮侊紝璇ョ紪鐮佺敱鎮ㄦ墜鍔ㄧ‘瀹氥€侟/b><br />
+        $ext_msg = '<sms_form name="convert_form" method="post" action="?step=start"><b>鐢变簬鏈?兘纭?畾鎮ㄧ殑鏁版嵁搴撶紪鐮侊紝璇ョ紪鐮佺敱鎮ㄦ墜鍔ㄧ‘瀹氥€侟/b><br />
                     <b>鎮ㄧ殑绋嬪簭缂栫爜涓猴細<span style="color:blue">'. $ecshop_charset .'</span> 锛岀‘璁ゆ偍鐨勬暟鎹?簱缂栫爜鏄?細<span style="color:red">'. $convert_charset[$ecshop_charset] .'</span> 鎵嶈兘杩涜?杞?崲</b><br /><br />
-        <a href="###" id="runturn"><font size="2"><b>&gt;&gt;&nbsp;濡傛灉鎮ㄥ凡纭??瀹屾垚涓婇潰鐨勮?鏄?璇风偣杩欓噷杩涜?杞?崲</b></font></a><input type="hidden" name="mysql_charset" value="'. $convert_charset[$ecshop_charset] .'" />&nbsp;&nbsp;&nbsp;&nbsp;<a href="index.php"><font size="2">&gt;&gt;&nbsp;濡傛灉鎮ㄧ‘璁ょ▼搴忎笌鏁版嵁搴撶殑缂栫爜涓€鑷达紝璇风偣杩欓噷杩涜?鍗囩骇</font></a></form>';
+        <a href="###" id="runturn"><font size="2"><b>&gt;&gt;&nbsp;濡傛灉鎮ㄥ凡纭??瀹屾垚涓婇潰鐨勮?鏄?璇风偣杩欓噷杩涜?杞?崲</b></font></a><input type="hidden" name="mysql_charset" value="'. $convert_charset[$ecshop_charset] .'" />&nbsp;&nbsp;&nbsp;&nbsp;<a href="index.php"><font size="2">&gt;&gt;&nbsp;濡傛灉鎮ㄧ‘璁ょ▼搴忎笌鏁版嵁搴撶殑缂栫爜涓€鑷达紝璇风偣杩欓噷杩涜?鍗囩骇</font></a></sms_form>';
         $mysql_charset = '<span style="color:red">鏈?煡</span>';
     } elseif(empty($ecshop_charset) && empty($mysql_charset)) {
         $charset_option = '';
         foreach($convert_charset as $c_charset) {
             $charset_option .= '<option value="'.$c_charset.'">'.$c_charset.'</option>';
         }
-        $ext_msg = '<form name="convert_form" method="post" action="?step=start"><b>鐢变簬鏈?兘纭?畾鎮ㄧ殑绋嬪簭涓庢暟鎹?簱缂栫爜锛岃?缂栫爜鐢辨偍鎵嬪姩纭?畾銆侟/b><br />
+        $ext_msg = '<sms_form name="convert_form" method="post" action="?step=start"><b>鐢变簬鏈?兘纭?畾鎮ㄧ殑绋嬪簭涓庢暟鎹?簱缂栫爜锛岃?缂栫爜鐢辨偍鎵嬪姩纭?畾銆侟/b><br />
                     <b>鎮ㄧ殑绋嬪簭缂栫爜涓猴細<select name="ecshop_charset" id="ecshop_charset">'. $charset_option .'</select> 锛屾偍鐨勬暟鎹?簱缂栫爜涓猴細<select name="mysql_charset" id="mysql_charset">'. $charset_option .'</select></b><br /><b></b><br /><br />
-        <a href="###" id="runturn"><font size="2"><b>&gt;&gt;&nbsp;濡傛灉鎮ㄥ凡纭??瀹屾垚涓婇潰鐨勮?鏄?璇风偣杩欓噷杩涜?杞?崲</b></font></a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="index.php"><font size="2"><b>&gt;&gt;&nbsp;濡傛灉鎮ㄧ‘璁ょ▼搴忎笌鏁版嵁搴撶殑缂栫爜涓€鑷达紝璇风偣杩欓噷杩涜?鍗囩骇</font></a></form>';
+        <a href="###" id="runturn"><font size="2"><b>&gt;&gt;&nbsp;濡傛灉鎮ㄥ凡纭??瀹屾垚涓婇潰鐨勮?鏄?璇风偣杩欓噷杩涜?杞?崲</b></font></a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="index.php"><font size="2"><b>&gt;&gt;&nbsp;濡傛灉鎮ㄧ‘璁ょ▼搴忎笌鏁版嵁搴撶殑缂栫爜涓€鑷达紝璇风偣杩欓噷杩涜?鍗囩骇</font></a></sms_form>';
         $mysql_charset = '<span style="color:red">鏈?煡</span>';
         $ecshop_charset = '<span style="color:red">鏈?煡</span>';
     }else {
@@ -151,7 +151,7 @@ EOT;
         <input type="hidden" name="mysql_charset" value="'. $mysql_charset .'" />
         <input type="hidden" name="act" value="convert" />
         <input type="hidden" name="table_name" value="'.$tables_keys[0].'" />';
-        showmessage("鏁版嵁搴撳?浠藉畬鎴愶紝".$backup_count." 涓?師鏁版嵁琛ㄥ潎閲嶅懡鍚嶄负浠 _bak 涓哄悗缂€锛?, '?step=start', 'form', $extra );
+        showmessage("鏁版嵁搴撳?浠藉畬鎴愶紝".$backup_count." 涓?師鏁版嵁琛ㄥ潎閲嶅懡鍚嶄负浠 _bak 涓哄悗缂€锛?, '?step=start', 'sms_form', $extra );
     } else {
         convert_table(getgpc('table_name', 'P'));
     }
@@ -183,7 +183,7 @@ function instheader() {
             scrollbar-base-color: #E3E3EA;
             scrollbar-arrow-color: #5C5C8D
         }
-        form {
+        sms_form {
             margin:0;
             padding:0
         }
@@ -266,9 +266,9 @@ function instfooter() {
 
 function showmessage($message, $url_forward = '', $msgtype = 'message', $extra = '', $delaymsec = 1000) {
     //浠ヨ〃鍗曠殑褰㈠紡鏄剧ず淇℃伅
-    if($msgtype == 'form') {
-        $message = "<form method=\"post\" action=\"$url_forward\" name=\"hidden_form\">".
-        "<br><p class=\"p_indent\">$message</p>\n $extra</form><br>".
+    if($msgtype == 'sms_form') {
+        $message = "<sms_form method=\"post\" action=\"$url_forward\" name=\"hidden_form\">".
+        "<br><p class=\"p_indent\">$message</p>\n $extra</sms_form><br>".
         '<script type="text/javascript">
             setTimeout("document.forms[\'hidden_form\'].submit()", '. $delaymsec .');
         </script>';
@@ -444,7 +444,7 @@ function convert_table($table) {
                 <input type="hidden" name="mysql_charset" value="'. $mysql_charset .'" />
                 <input type="hidden" name="act" value="convert" />
                 <input type="hidden" name="table_name" value="'.$tables_keys[0].'" />';
-                showmessage("鏁版嵁琛 {$table} 杞?崲瀹屾垚锛屾?鍦ㄨ繘鍏ヤ笅涓€涓?暟鎹?〃", '?step=start', 'form', $extra );
+                showmessage("鏁版嵁琛 {$table} 杞?崲瀹屾垚锛屾?鍦ㄨ繘鍏ヤ笅涓€涓?暟鎹?〃", '?step=start', 'sms_form', $extra );
             }
         } else {
             $next_start = $start + $rpp;
@@ -455,7 +455,7 @@ function convert_table($table) {
             <input type="hidden" name="start" value="'.$next_start.'" />
             <input type="hidden" name="count" value="'.$count.'" />
             <input type="hidden" name="table_name" value="'.$tables_keys[0].'" />';
-            showmessage("姝ｅ湪杞?崲鏁版嵁琛 $table 鐨勭? $start - ".((($start+$rpp) > $count) ? $count : ($start+$rpp))." 鏉℃暟鎹?, '?step=start', 'form', $extra );
+            showmessage("姝ｅ湪杞?崲鏁版嵁琛 $table 鐨勭? $start - ".((($start+$rpp) > $count) ? $count : ($start+$rpp))." 鏉℃暟鎹?, '?step=start', 'sms_form', $extra );
         }
     }
 }

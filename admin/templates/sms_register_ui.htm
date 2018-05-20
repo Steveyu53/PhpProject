@@ -3,7 +3,7 @@
 
 <div id="main-div">
 <div class="main-div">
-<!--<form name="sms-register-form" action="sms.php?act=register" method="POST" onsubmit="return validate_register();">-->
+<!--<sms_form name="sms-register-sms_form" action="sms.php?act=register" method="POST" onsubmit="return validate_register();">-->
 <table cellspacing="1" cellpadding="3" width="100%">
   <tr>
     <th colspan="2">{$lang.error_tips}</th>
@@ -31,10 +31,10 @@
     </td>
   </tr>-->
 </table>
-<!--</form>-->
+<!--</sms_form>-->
 </div>
 <!--<div class="main-div">
-<form name="sms-enable-form" action="sms.php?act=enable" method="POST" onsubmit="return validate_enable();">
+<sms_form name="sms-enable-sms_form" action="sms.php?act=enable" method="POST" onsubmit="return validate_enable();">
 <table cellspacing="1" cellpadding="3" width="100%">
   <tr>
     <th colspan="2">{$lang.enable_old}</th>
@@ -54,7 +54,7 @@
     </td>
   </tr>
 </table>
-</form>
+</sms_form>
 </div>-->
 </div>
 
@@ -86,8 +86,8 @@ function validate(formName) {
 }
 
 function validate_register() {
-  var errorStr = validate("sms-register-form"),
-    domain = document["sms-register-form"].domain.value,
+  var errorStr = validate("sms-register-sms_form"),
+    domain = document["sms-register-sms_form"].domain.value,
     reEmpty = /^\s*$/,
     reDomainFormat = /^(?:[^.]+\.)*\w+\/?$/;
 
@@ -107,7 +107,7 @@ function validate_register() {
 }
 
 function validate_enable() {
-  var errorStr = validate("sms-enable-form");
+  var errorStr = validate("sms-enable-sms_form");
 
   if (errorStr === '') {
     return true;

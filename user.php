@@ -470,6 +470,7 @@ elseif ($action == 'profile')
             case 3:     $extend_info_list[$key]['content'] = $user_info['office_phone']; break;
             case 4:     $extend_info_list[$key]['content'] = $user_info['home_phone']; break;
             case 5:     $extend_info_list[$key]['content'] = $user_info['mobile_phone']; break;
+//            case 6:     $extend_info_list[$key]['content'] = $u
             default:    $extend_info_list[$key]['content'] = empty($temp_arr[$val['id']]) ? '' : $temp_arr[$val['id']] ;
         }
     }

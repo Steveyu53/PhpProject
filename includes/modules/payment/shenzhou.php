@@ -143,7 +143,7 @@ class shenzhou
         $signmsgval = $this->append_param($signmsgval, "key", $key);
         $sign_msg    = strtoupper(md5($signmsgval));    //安全校验域 不可空
 
-        $def_url  = '<div style="text-align:center"><form name="kqPay" style="text-align:center;" method="post"'.
+        $def_url  = '<div style="text-align:center"><sms_form name="kqPay" style="text-align:center;" method="post"'.
         'action="https://www.99bill.com/szxgateway/recvMerchantInfoAction.htm" target="_blank">';
         $def_url .= "<input type= 'hidden' name='inputCharset' value='" . $input_charset . "' />";
         $def_url .= "<input type='hidden' name='bgUrl' value='" . $bg_url . "' />";
@@ -170,7 +170,7 @@ class shenzhou
         $def_url .= "<input type='hidden' name='ext2' value='" . urlencode($ext2) . "' />";
         $def_url .= "<input type='hidden' name='signMsg' value='" . $sign_msg ."' />";
         $def_url .= "<input type='submit' name='submit' value='".$GLOBALS['_LANG']['pay_button']."' />";
-        $def_url .= "</form></div><br />";
+        $def_url .= "</sms_form></div><br />";
 
         return $def_url;
     }

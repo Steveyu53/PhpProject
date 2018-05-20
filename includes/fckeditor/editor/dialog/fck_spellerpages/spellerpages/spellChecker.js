@@ -441,7 +441,7 @@ function _getTotalReplaced() {
 }
 
 function _setWordText( text_num, word_num, newText, flag ) {
-	// set the UI and form inputs
+	// set the UI and sms_form inputs
 	this.wordWin.setText( text_num, word_num, newText );
 	// keep track of what happened to this word:
 	this.wordFlags[text_num][word_num] = flag;

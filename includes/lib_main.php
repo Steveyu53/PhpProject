@@ -1326,8 +1326,11 @@ function get_tags($goods_id = 0, $user_id = 0)
  */
 function get_dyna_libs($theme, $tmp)
 {
-    $ext = end(explode('.', $tmp));
+//    $ext = end(explode('.', $tmp));
+    $ext = explode('.', $tmp);
+    $tmp = end($ext);
     $tmp = basename($tmp,".$ext");
+//    $tmp = basename($tmp,".$ext");
     $sql = 'SELECT region, library, sort_order, id, number, type' .
             ' FROM ' . $GLOBALS['ecs']->table('template') .
             " WHERE theme = '$theme' AND filename = '" . $tmp . "' AND type > 0 AND remarks=''".

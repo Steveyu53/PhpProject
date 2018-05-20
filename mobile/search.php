@@ -93,7 +93,7 @@ if ($_REQUEST['act'] == 'advanced_search')
     $smarty->assign('promotion_info', get_promotion_info());
     $smarty->assign('cat_list',   cat_list(0, 0, true, 2, false));
     $smarty->assign('brand_list', get_brand_list());
-    $smarty->assign('action',     'form');
+    $smarty->assign('action',     'sms_form');
     $smarty->assign('use_storage', $_CFG['use_storage']);
 
     $smarty->display('search.dwt');
@@ -115,7 +115,7 @@ else
     $_REQUEST['outstock']   = !empty($_REQUEST['outstock']) ? 1 : 0;
 
     $action = '';
-    if (isset($_REQUEST['action']) && $_REQUEST['action'] == 'form')
+    if (isset($_REQUEST['action']) && $_REQUEST['action'] == 'sms_form')
     {
         /* 要显示高级搜索栏 */
         $adv_value['keywords']  = htmlspecialchars(stripcslashes($_REQUEST['keywords']));
@@ -152,10 +152,10 @@ else
         $smarty->assign('goods_type_selected', $_REQUEST['goods_type']);
         $smarty->assign('cat_list',            cat_list(0, $adv_value['category'], true, 2, false));
         $smarty->assign('brand_list',          get_brand_list());
-        $smarty->assign('action',              'form');
+        $smarty->assign('action',              'sms_form');
         $smarty->assign('use_storage',          $_CFG['use_storage']);
 
-        $action = 'form';
+        $action = 'sms_form';
     }
 
     /* 初始化搜索条件 */

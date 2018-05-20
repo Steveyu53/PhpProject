@@ -1,6 +1,6 @@
 <!-- $Id: integrates_uc_import.htm 14960 2008-10-20 05:23:26Z testyang $ -->
 {include file="pageheader.htm"}
-<!-- start integrate setup form -->
+<!-- start integrate setup sms_form -->
 <div style="border: 1px solid #CC0000;background-color:#FFFFCE;color:#CE0000;padding:4px;" >{$lang.uc_import_notice}</div>
 <div class="main-div" style="padding:5px;">
   <form action="integrate.php" method="post" name="theForm">
@@ -14,7 +14,7 @@
   <input type="button" value="{$lang.start_import}" class="button" onclick="import_start(this)">
   </form>
 </div>
-<!-- end integrate setup form -->
+<!-- end integrate setup sms_form -->
 {insert_scripts files="../js/utils.js,validator.js"}
 {literal}
 <script language="JavaScript">

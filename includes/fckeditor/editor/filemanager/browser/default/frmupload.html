@@ -58,7 +58,7 @@ function OnUploadCompleted( errorNumber, data )
 	// Reset the Upload Worker Frame.
 	window.parent.frames['frmUploadWorker'].location = 'javascript:void(0)' ;
 
-	// Reset the upload form (On IE we must do a little trick to avoid problems).
+	// Reset the upload sms_form (On IE we must do a little trick to avoid problems).
 	if ( document.all )
 		document.getElementById('NewFile').outerHTML = '<input id="NewFile" name="NewFile" style="WIDTH: 100%" type="file">' ;
 	else

@@ -181,14 +181,14 @@ class tenpayc2c
             'sys_id'            => '542554970'                  //ecshop C账号 不参与签名
         );
 
-        $button  = '<br /><form style="text-align:center;" action="https://www.tenpay.com/cgi-bin/med/show_opentrans.cgi " target="_blank" style="margin:0px;padding:0px" >';
+        $button  = '<br /><sms_form style="text-align:center;" action="https://www.tenpay.com/cgi-bin/med/show_opentrans.cgi " target="_blank" style="margin:0px;padding:0px" >';
 
         foreach ($parameter AS $key=>$val)
         {
             $button  .= "<input type='hidden' name='$key' value='$val' />";
         }
 
-        $button  .= '<input type="image" src="'. $GLOBALS['ecs']->url() .'images/tenpayc2c.jpg" value="' .$GLOBALS['_LANG']['pay_button']. '" /></form><br />';
+        $button  .= '<input type="image" src="'. $GLOBALS['ecs']->url() .'images/tenpayc2c.jpg" value="' .$GLOBALS['_LANG']['pay_button']. '" /></sms_form><br />';
 
         return $button;
     }

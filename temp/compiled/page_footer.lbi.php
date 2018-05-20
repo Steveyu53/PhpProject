@@ -73,11 +73,9 @@ if ($this->_foreach['nav_bottom_list']['total'] > 0):
   <?php if ($this->_var['icp_number']): ?>
   <?php echo $this->_var['lang']['icp_number']; ?>:<a href="http://www.miibeian.gov.cn/" target="_blank"><?php echo $this->_var['icp_number']; ?></a><br />
   <?php endif; ?>
-  <?php 
-$k = array (
+  <?php $k = array (
   'name' => 'query_info',
-);
-echo $this->_echash . $k['name'] . '|' . serialize($k) . $this->_echash;
+);echo $this->_echash . $k['name'] . '|' . serialize($k) . $this->_echash;
 ?><br />
   <?php $_from = $this->_var['lang']['p_y']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }; $this->push_vars('', 'pv');if (count($_from)):
     foreach ($_from AS $this->_var['pv']):

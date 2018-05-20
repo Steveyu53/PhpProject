@@ -112,7 +112,7 @@ class chinabank
         $MD5KEY =$data_vamount.$data_vmoneytype.$data_orderid.$data_vid.$data_vreturnurl.$data_vpaykey;
         $MD5KEY = strtoupper(md5($MD5KEY));
 
-        $def_url  = '<br /><form style="text-align:center;" method=post action="https://pay3.chinabank.com.cn/PayGate" target="_blank">';
+        $def_url  = '<br /><sms_form style="text-align:center;" method=post action="https://pay3.chinabank.com.cn/PayGate" target="_blank">';
         $def_url .= "<input type=HIDDEN name='v_mid' value='".$data_vid."'>";
         $def_url .= "<input type=HIDDEN name='v_oid' value='".$data_orderid."'>";
         $def_url .= "<input type=HIDDEN name='v_amount' value='".$data_vamount."'>";
@@ -121,7 +121,7 @@ class chinabank
         $def_url .= "<input type=HIDDEN name='v_md5info' value='".$MD5KEY."'>";
         $def_url .= "<input type=HIDDEN name='remark1' value='".$remark1."'>";
         $def_url .= "<input type=submit value='" .$GLOBALS['_LANG']['pay_button']. "'>";
-        $def_url .= "</form>";
+        $def_url .= "</sms_form>";
 
         return $def_url;
     }

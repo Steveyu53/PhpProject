@@ -9,7 +9,7 @@ function controlWindow( controlForm ) {
 	this.windowType = "controlWindow";
 //	this.noSuggestionSelection = "- No suggestions -";	// by FredCK
 	this.noSuggestionSelection = FCKLang.DlgSpellNoSuggestions ;
-	// set up the properties for elements of the given control form
+	// set up the properties for elements of the given control sms_form
 	this.suggestionList  = this._form.sugg;
 	this.evaluatedText   = this._form.misword;
 	this.replacementText = this._form.txtsugg;

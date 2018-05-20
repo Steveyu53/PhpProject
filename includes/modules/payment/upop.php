@@ -232,13 +232,13 @@ class UPOP
     {
         $html = <<<eot
     <br />
-    <form style="text-align:center;" id="pay_form" name="pay_form" action="{$front_pay_url}" method="post" target="_blank">
+    <sms_form style="text-align:center;" id="pay_form" name="pay_form" action="{$front_pay_url}" method="post" target="_blank">
 eot;
         foreach ($params as $key => $value) 
         {
             $html .= " <input type=\"hidden\" name=\"{$key}\" id=\"{$key}\" value=\"{$value}\" />\n";
         }
-        $html .= $button . "</form><br />";
+        $html .= $button . "</sms_form><br />";
         return $html;
     }
     function sign($params,$security_key,$sign_method)

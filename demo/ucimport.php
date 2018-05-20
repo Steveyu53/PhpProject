@@ -147,7 +147,7 @@ EOT;
         $total_item = $limit+$item_num;
         $extra = '<input type="hidden" name="update" value="'.$update.'" /><input type="hidden" name="insert" value="'.$insert.'" /><input type="hidden" name="success" value="'.$success.'" /><input type="hidden" name="error" value="'.$error.'" /><input type="hidden" name="limit" value="'.$total_item.'" />';
         $message = "<p>鍏辨湁 <strong>$total_members</strong> 涓?細鍛樻暟鎹?/p><p>褰撳墠鍦ㄥ?鍏 $limit - $total_item 鐨勪細鍛樻暟鎹?/p><p><ul><li>鏇存柊鐨勭敤鎴锋暟鎹?細$update 鏉狘/li><li>鏂板?鐨勭敤鎴锋暟鎹?細$insert 鏉狘/li><li>鎴愬姛鐨勭敤鎴锋暟鎹?細$success 鏉狘/li><li>鍑洪敊鐨勭敤鎴锋暟鎹?細$error 鏉狘/li></ul></p>";
-        showmessage($message, '?step=start', 'form', $extra);
+        showmessage($message, '?step=start', 'sms_form', $extra);
     }
 }
 ob_end_flush();
@@ -177,7 +177,7 @@ function instheader() {
             scrollbar-base-color: #E3E3EA;
             scrollbar-arrow-color: #5C5C8D
         }
-        form {
+        sms_form {
             margin:0;
             padding:0
         }
@@ -260,9 +260,9 @@ function instfooter() {
 
 function showmessage($message, $url_forward = '', $msgtype = 'message', $extra = '', $delaymsec = 1000) {
     //浠ヨ〃鍗曠殑褰㈠紡鏄剧ず淇℃伅
-    if($msgtype == 'form') {
-        $message = "<form method=\"post\" action=\"$url_forward\" name=\"hidden_form\">".
-        "<br><p class=\"p_indent\">$message</p>\n $extra</form><br>".
+    if($msgtype == 'sms_form') {
+        $message = "<sms_form method=\"post\" action=\"$url_forward\" name=\"hidden_form\">".
+        "<br><p class=\"p_indent\">$message</p>\n $extra</sms_form><br>".
         '<script type="text/javascript">
             setTimeout("document.forms[\'hidden_form\'].submit()", '. $delaymsec .');
         </script>';

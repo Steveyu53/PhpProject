@@ -150,13 +150,13 @@ class ems
      */
     function query($invoice_sn)
     {
-        $str = '<form style="margin:0px" method="post" '.
+        $str = '<sms_form style="margin:0px" method="post" '.
             'action="http://www.ems.com.cn/qcgzOutQueryAction.do" name="queryForm_' .$invoice_sn. '" target="_blank">'.
             '<input type="hidden" name="mailNum" value="' .$invoice_sn. '" />'.
             '<a href="javascript:document.forms[\'queryForm_' .$invoice_sn. '\'].submit();">' .$invoice_sn. '</a>'.
             '<input type="hidden" name="reqCode" value="browseBASE" />'.
             '<input type="hidden" name="checknum" value="0568792906411" />'.
-            '</form>';
+            '</sms_form>';
 
         return $str;
     }

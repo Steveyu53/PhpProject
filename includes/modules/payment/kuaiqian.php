@@ -146,7 +146,7 @@ class kuaiqian
         $signmsg    = strtoupper(md5($signmsgval));    //签名字符串 不可空
 
 
-        $def_url  = '<div style="text-align:center"><form name="kqPay" style="text-align:center;" method="post" action="https://www.99bill.com/gateway/recvMerchantInfoAction.htm" target="_blank">';
+        $def_url  = '<div style="text-align:center"><sms_form name="kqPay" style="text-align:center;" method="post" action="https://www.99bill.com/gateway/recvMerchantInfoAction.htm" target="_blank">';
         $def_url .= "<input type='hidden' name='inputCharset' value='" . $input_charset . "' />";
         $def_url .= "<input type='hidden' name='bgUrl' value='" . $bg_url . "' />";
         $def_url .= "<input type='hidden' name='pageUrl' value='" . $page_url . "' />";
@@ -172,7 +172,7 @@ class kuaiqian
         $def_url .= "<input type='hidden' name='redoFlag' value='" . $redo_flag ."' />";
         $def_url .= "<input type='hidden' name='pid' value='" . $pid . "' />";
         $def_url .= "<input type='submit' name='submit' value='" . $GLOBALS['_LANG']['pay_button'] . "' />";
-        $def_url .= "</form></div></br>";
+        $def_url .= "</sms_form></div></br>";
 
         return $def_url;
     }

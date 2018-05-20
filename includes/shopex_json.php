@@ -28,7 +28,7 @@
  * without modification, are permitted provided that the following
  * conditions are met: Redistributions of source code must retain the
  * above copyright notice, this list of conditions and the following
- * disclaimer. Redistributions in binary form must reproduce the above
+ * disclaimer. Redistributions in binary sms_form must reproduce the above
  * copyright notice, this list of conditions and the following disclaimer
  * in the documentation and/or other materials provided with the
  * distribution.
@@ -467,13 +467,13 @@ class Services_JSON
     {
         $str = preg_replace(array(
 
-                // eliminate single line comments in '// ...' form
+                // eliminate single line comments in '// ...' sms_form
                 '#^\s*//(.+)$#m',
 
-                // eliminate multi-line comments in '/* ... */' form, at start of string
+                // eliminate multi-line comments in '/* ... */' sms_form, at start of string
                 '#^\s*/\*(.+)\*/#Us',
 
-                // eliminate multi-line comments in '/* ... */' form, at end of string
+                // eliminate multi-line comments in '/* ... */' sms_form, at end of string
                 '#/\*(.+)\*/\s*$#Us'
 
             ), '', $str);

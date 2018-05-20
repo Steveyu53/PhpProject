@@ -42,7 +42,7 @@ $_LANG['remark_info'] = '<ul>' .
         '</ul>';
 
 $_LANG['connect_db_error'] ='Can\'t connect database, please check install information.';
-$_LANG['table_error'] ='Shortage of essential form %s, please check install information.';
+$_LANG['table_error'] ='Shortage of essential sms_form %s, please check install information.';
 $_LANG['dir_error'] ='Shortage of essential directory %s, please check install information.';
 $_LANG['dir_not_readable'] ='The directory can\'t be read %s.';
 $_LANG['dir_not_writable'] ='The directory can\'t be wrote %s.';

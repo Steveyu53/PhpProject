@@ -14,7 +14,7 @@ $db_pass   = "root";
 // table prefix
 $prefix    = "ecs_";
 
-$timezone    = "Asia/Chongqing";
+$timezone    = "PRC";
 
 $cookie_path    = "/";
 
@@ -30,6 +30,6 @@ define('AUTH_KEY', 'this is a key');
 
 define('OLD_AUTH_KEY', '');
 
-define('API_TIME', '');
+define('API_TIME', '2018-04-21 15:49:33');
 
 ?>

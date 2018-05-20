@@ -153,11 +153,11 @@ class sto_express
      */
     function query($invoice_sn)
     {
-        $str = '<form style="margin:0px" methods="post" '.
+        $str = '<sms_form style="margin:0px" methods="post" '.
             'action="http://115.238.100.211:8081/result.aspx" name="queryForm_' .$invoice_sn. '" target="_blank">'.
             '<input type="hidden" name="wen" value="' .str_replace("<br>","\n",$invoice_sn). '" />'.
             '<a href="javascript:document.forms[\'queryForm_' .$invoice_sn. '\'].submit();">' .$invoice_sn. '</a>'.
-            '</form>';
+            '</sms_form>';
 
         return $str;
     }

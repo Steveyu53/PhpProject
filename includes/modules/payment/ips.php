@@ -101,7 +101,7 @@ class ips
         $strcontent = $billno . $amount . $datestr . 'RMB' . $strcert; // 签名验证串 //
         $signmd5    = MD5($strcontent);
 
-        $def_url  = '<br /><form style="text-align:center;" action="https://pay.ips.com.cn/ipayment.aspx" method="post" target="_blank">';
+        $def_url  = '<br /><sms_form style="text-align:center;" action="https://pay.ips.com.cn/ipayment.aspx" method="post" target="_blank">';
         $def_url .= "<input type='hidden' name='Mer_code' value='" . $mer_code . "'>\n";
         $def_url .= "<input type='hidden' name='Billno' value='" . $billno . "'>\n";
         $def_url .= "<input type='hidden' name='Gateway_type' value='" . $payment['ips_currency'] . "'>\n";
@@ -115,7 +115,7 @@ class ips
         $def_url .= "<input type='hidden' name='Merchanturl' value='" . return_url(basename(__FILE__, '.php')) . "'>\n";
         $def_url .= "<input type='hidden' name='SignMD5' value='" . $signmd5 . "'>\n";
         $def_url .= "<input type='submit' value='" . $GLOBALS['_LANG']['pay_button'] . "'>";
-        $def_url .= "</form><br />";
+        $def_url .= "</sms_form><br />";
 
         return $def_url;
     }

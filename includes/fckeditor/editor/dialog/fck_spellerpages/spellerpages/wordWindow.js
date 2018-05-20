@@ -143,7 +143,7 @@ function writeBody() {
 	for( var txtid = 0; txtid < this.textInputs.length; txtid++ ) {
 		var end_idx = 0;
 		var begin_idx = 0;
-		d.writeln( '<form name="textInput'+txtid+'">' );
+		d.writeln( '<sms_form name="textInput'+txtid+'">' );
 		var wordtxt = this.textInputs[txtid];
 		this.indexes[txtid] = [];
 
@@ -193,7 +193,7 @@ function writeBody() {
 			d.writeln( '</div>' );
 
 		}
-		d.writeln( '</form>' );
+		d.writeln( '</sms_form>' );
 	}
 	//for ( var j = 0; j < d.forms.length; j++ ) {
 	//	alert( d.forms[j].name );

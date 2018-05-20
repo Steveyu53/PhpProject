@@ -44,7 +44,7 @@ Usage:
 $_LANG['lost_install_log'] = 'Did not find the installation log';
 $_LANG['empty_install_log'] = 'Installation log is empty';
 
-/* The form related language item*/
+/* The sms_form related language item*/
 $_LANG['db_notice'] = 'Click“<font color="#000000">Next</font>”Will guide you to the mall user data will be synchronized to the integration of the Forum。If no synchronous data please click“<font color="#000000">Save configuration information directly</font>”';
 
 $_LANG['lable_db_host'] ='Database server host:';
@@ -55,7 +55,7 @@ $_LANG['lable_db_user'] ='Database account number:';
 $_LANG['lable_db_pass'] ='Database password:';
 $_LANG['lable_prefix'] ='Datasheet prefixion:';
 $_LANG['lable_url'] ='Complete URL of the integrated system:';
-/* The form related labguage item(discus5x) */
+/* The sms_form related labguage item(discus5x) */
 $_LANG['cookie_prefix']          = 'COOKIE prefix:';
 $_LANG['cookie_salt']          = 'COOKIE Encrypted string：';
 $_LANG['button_next'] = 'next';
@@ -180,7 +180,7 @@ $_LANG['ucenter_notice_key'] = 'Communication key for UCenter and ECShop informa
 $_LANG['ucenter_notice_url'] = 'The value after you finish installing UCenter will be initialized in your address or directory UCenter changing circumstances, to change this, please do not change the general situation such as: http://www.sitename.com/uc_server (Finally do not increase"/")';
 $_LANG['ucenter_notice_ip'] = 'If your server can not access through the domain name UCenter, can enter the IP address of the server UCenter';
 $_LANG['ucenter_notice_connect'] = 'Depending on your server network environment to choose the appropriate connection method';
-$_LANG['ucenter_notice_db_host'] = 'Can be local can also be a remote database server, if instead of the default MySQL port 3306, please fill out the following form: 127.0.0.1:6033';
+$_LANG['ucenter_notice_db_host'] = 'Can be local can also be a remote database server, if instead of the default MySQL port 3306, please fill out the following sms_form: 127.0.0.1:6033';
 $_LANG['uc_notice_ip'] = 'Some effort to connect the process of problem, please fill out the server IP address, if you have UC and ECShop mounted on the same server, we recommend that you try to fill in 127.0.0.1';
 
 $_LANG['uc_lab_url'] = 'UCenter of URL:';

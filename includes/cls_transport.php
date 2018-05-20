@@ -183,7 +183,7 @@ class transport
         else
         {
             $request_body  = $params;
-            $content_type = 'Content-Type: application/x-www-form-urlencoded' . $crlf;
+            $content_type = 'Content-Type: application/x-www-sms_form-urlencoded' . $crlf;
             $content_length = 'Content-Length: ' . strlen($request_body) . $crlf . $crlf;
         }
 
@@ -308,7 +308,7 @@ class transport
         else
         {
             curl_setopt($curl_session, CURLOPT_POST, true);
-            $header[] = 'Content-Type: application/x-www-form-urlencoded';
+            $header[] = 'Content-Type: application/x-www-sms_form-urlencoded';
             $header[] = 'Content-Length: ' . strlen($params);
             curl_setopt($curl_session, CURLOPT_POSTFIELDS, $params);
         }

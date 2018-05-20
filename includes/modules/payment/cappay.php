@@ -103,7 +103,7 @@ class cappay
         $v_oid      = "$v_ymd-$v_rcvname-$m_orderid";
         $sourcedata = $v_moneytype.$v_ymd.$v_amount.$v_rcvname.$v_oid.$v_rcvname.$v_url;
         $result     = $this->hmac_md5($MD5Key,$sourcedata);
-        $def_url  = '<form method=post action="http://pay.beijing.com.cn/prs/user_payment.checkit" target="_blank">';
+        $def_url  = '<sms_form method=post action="http://pay.beijing.com.cn/prs/user_payment.checkit" target="_blank">';
         $def_url .= "<input type= 'hidden' name = 'v_mid'     value= '".$v_rcvname."'>";     //商户编号
         $def_url .= "<input type= 'hidden' name = 'v_oid'     value= '".$v_oid."'>";         //订单编号
         $def_url .= "<input type= 'hidden' name = 'v_rcvname' value= '".$v_rcvname."'>";     //收货人姓名
@@ -119,10 +119,10 @@ class cappay
         $def_url .= "<input type='hidden' name='v_md5info' value=$result>";              //订单数字指纹
         $def_url .= "<input type='submit' value='" . $GLOBALS['_LANG']['cappay_button'] . "'>";
 
-        $def_url .= '</form>';
+        $def_url .= '</sms_form>';
 
           /*易支付会员通道
-        $def_url  = "<form method=post action='http://pay.beijing.com.cn/customer/gb/pay_member.jsp' target='_blank'>";
+        $def_url  = "<sms_form method=post action='http://pay.beijing.com.cn/customer/gb/pay_member.jsp' target='_blank'>";
         $def_url .= "<input type='hidden' name='v_mid' value='".$v_rcvname."'>";                   //商户编号
         $def_url .= "<input type='hidden' name='v_oid' value='".$v_oid."'>";                       //订单编号
         $def_url .= "<input type='hidden' name='v_rcvname' value='".$v_rcvname."'>";               //收货人姓名
@@ -138,10 +138,10 @@ class cappay
         $def_url .= "<input type='hidden' name='v_md5info' value=$result[0]>";           //订单数字指纹
         $def_url .= "<input type='submit' value='"  . $GLOBALS['_LANG']['cappay_member_button'] .  "'>";
 
-        $def_url .= '</form>';
+        $def_url .= '</sms_form>';
 
           //易支付手机通道
-        $def_url  = "<form method=post action='http://pay.beijing.com.cn/customer/gb/pay_mobile.jsp' target='_blank'>";
+        $def_url  = "<sms_form method=post action='http://pay.beijing.com.cn/customer/gb/pay_mobile.jsp' target='_blank'>";
         $def_url .= "<input type='hidden' name='v_mid' value='".$v_rcvname."'>";                   //商户编号
         $def_url .= "<input type='hidden' name='v_oid' value='".$v_oid."'>";                       //订单编号
         $def_url .= "<input type='hidden' name='v_rcvname' value='".$v_rcvname."'>";               //收货人姓名
@@ -157,10 +157,10 @@ class cappay
         $def_url .= "<input type='hidden' name='v_md5info' value=$result[0]>";           //订单数字指纹
         $def_url .= "<input type='submit' value='"  . $GLOBALS['_LANG']['cappay_mobile_button'] .  "'>";
 
-        $def_url .= '</form>';
+        $def_url .= '</sms_form>';
 
           //易支付英文通道
-        $def_url  = "<form method=post action='http://pay.beijing.com.cn/prs/e_user_payment.checkit' target='_blank'>";
+        $def_url  = "<sms_form method=post action='http://pay.beijing.com.cn/prs/e_user_payment.checkit' target='_blank'>";
         $def_url .= "<input type='hidden' name='v_mid' value='".$v_rcvname."'>";                   //商户编号
         $def_url .= "<input type='hidden' name='v_oid' value='".$v_oid."'>";                       //订单编号
         $def_url .= "<input type='hidden' name='v_rcvname' value='".$v_rcvname."'>";               //收货人姓名
@@ -176,7 +176,7 @@ class cappay
         $def_url .= "<input type='hidden' name='v_md5info' value=$result[0]>";           //订单数字指纹
         $def_url .= "<input type='submit' value='"  . $GLOBALS['_LANG']['cappay_en_button'] .  "'>";
 
-        $def_url .= '</form>';*/
+        $def_url .= '</sms_form>';*/
 
         return $def_url;
     }

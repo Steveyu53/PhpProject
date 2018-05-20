@@ -165,14 +165,14 @@ class tenpay
 
         );
 
-        $button  = '<br /><form style="text-align:center;" action="https://www.tenpay.com/cgi-bin/v1.0/pay_gate.cgi" target="_blank" style="margin:0px;padding:0px" >';
+        $button  = '<br /><sms_form style="text-align:center;" action="https://www.tenpay.com/cgi-bin/v1.0/pay_gate.cgi" target="_blank" style="margin:0px;padding:0px" >';
 
         foreach ($parameter AS $key=>$val)
         {
             $button  .= "<input type='hidden' name='$key' value='$val' />";
         }
 
-        $button  .= '<input type="image" src="'. $GLOBALS['ecs']->url() .'images/tenpay.gif" value="' .$GLOBALS['_LANG']['pay_button']. '" /></form><br />';
+        $button  .= '<input type="image" src="'. $GLOBALS['ecs']->url() .'images/tenpay.gif" value="' .$GLOBALS['_LANG']['pay_button']. '" /></sms_form><br />';
 
         return $button;
     }

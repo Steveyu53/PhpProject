@@ -248,7 +248,7 @@ else
     else
     {
         $smarty->assign('footer', get_footer());
-        $smarty->display('login.html');
+        $smarty->display('login.php');
     }
 }
 

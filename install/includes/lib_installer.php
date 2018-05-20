@@ -908,7 +908,7 @@ function dfopen($url, $limit = 0, $post = '', $cookie = '', $bysocket = FALSE, $
         $out .= "Accept: */*\r\n";
         //$out .= "Referer: $boardurl\r\n";
         $out .= "Accept-Language: zh-cn\r\n";
-        $out .= "Content-Type: application/x-www-form-urlencoded\r\n";
+        $out .= "Content-Type: application/x-www-sms_form-urlencoded\r\n";
         $out .= "User-Agent: $_SERVER[HTTP_USER_AGENT]\r\n";
         $out .= "Host: $host\r\n";
         $out .= 'Content-Length: '.strlen($post)."\r\n";

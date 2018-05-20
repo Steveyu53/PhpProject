@@ -7,11 +7,9 @@ var process_request = "<?php echo $this->_var['lang']['process_request']; ?>";
    <ul>
    <li class="userInfo">
    <?php echo $this->smarty_insert_scripts(array('files'=>'transport.js,utils.js')); ?>
-   <font id="ECS_MEMBERZONE"><?php 
-$k = array (
+   <font id="ECS_MEMBERZONE"><?php $k = array (
   'name' => 'member_info',
-);
-echo $this->_echash . $k['name'] . '|' . serialize($k) . $this->_echash;
+);echo $this->_echash . $k['name'] . '|' . serialize($k) . $this->_echash;
 ?> </font>
    </li>
    <?php if ($this->_var['navigator_list']['top']): ?>

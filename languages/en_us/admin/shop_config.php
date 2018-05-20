@@ -403,7 +403,7 @@ $_LANG['smtp_ssl_confirm'] = 'This feature requires that you must support the ph
 
 /* 邮件设置语言项 */
 $_LANG['cfg_name']['mail_service'] = 'E-mail Service';
-$_LANG['cfg_desc']['mail_service'] = 'If you choose the server using the built-in Mail Services, you do not need to fill the following form.';
+$_LANG['cfg_desc']['mail_service'] = 'If you choose the server using the built-in Mail Services, you do not need to fill the following sms_form.';
 $_LANG['cfg_range']['mail_service'][0] = 'Using the server built-in Mail Services';
 $_LANG['cfg_range']['mail_service'][1] = 'Using other SMTP Service';
 

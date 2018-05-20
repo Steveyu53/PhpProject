@@ -13,7 +13,7 @@
 **
 ** print_a( array array [,int returnmode] [,bool show object vars] [,int max entries] )
 **
-**   prints arrays in a readable form.
+**   prints arrays in a readable sms_form.
 **   if mode is defined the function returns the output instead of printing it to the output buffer
 **
 **   print_a( $array, #, 1 ) shows also object properties

@@ -37,7 +37,7 @@ $_LANG['title_upload_notice'] = 'Upload a picture Or input a URL';
 
 $_LANG['img_src'] = 'Image Address';
 $_LANG['img_url'] = 'Image URL';
-$_LANG['form_none'] = 'Failed,the form is imperfect.';
+$_LANG['form_none'] = 'Failed,the sms_form is imperfect.';
 $_LANG['web_url_no'] = 'Error in address.Please input the full URL.';
 $_LANG['src_empty'] = 'Error in address.';
 $_LANG['back_custom_set'] = 'Return to Custom AD';

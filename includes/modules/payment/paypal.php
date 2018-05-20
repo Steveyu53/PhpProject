@@ -99,7 +99,7 @@ class paypal
         $data_notify_url    = return_url(basename(__FILE__, '.php'));
         $cancel_return      = $GLOBALS['ecs']->url();
 
-        $def_url  = '<br /><form style="text-align:center;" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">' .   // 不能省略
+        $def_url  = '<br /><sms_form style="text-align:center;" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">' .   // 不能省略
             "<input type='hidden' name='cmd' value='_xclick'>" .                             // 不能省略
             "<input type='hidden' name='business' value='$data_pay_account'>" .                 // 贝宝帐号
             "<input type='hidden' name='item_name' value='$order[order_sn]'>" .                 // payment for
@@ -114,7 +114,7 @@ class paypal
             "<input type='hidden' name='rm' value='2'>" .
             "<input type='hidden' name='cancel_return' value='$cancel_return'>" .
             "<input type='submit' value='" . $GLOBALS['_LANG']['paypal_button'] . "'>" .                      // 按钮
-            "</form><br />";
+            "</sms_form><br />";
 
         return $def_url;
     }
@@ -137,7 +137,7 @@ class paypal
 
         // post back to PayPal system to validate
         $header = "POST /cgi-bin/webscr HTTP/1.0\r\n";
-        $header .= "Content-Type: application/x-www-form-urlencoded\r\n";
+        $header .= "Content-Type: application/x-www-sms_form-urlencoded\r\n";
         $header .= "Content-Length: " . strlen($req) ."\r\n\r\n";
         $fp = fsockopen ('www.paypal.com', 80, $errno, $errstr, 30);
 

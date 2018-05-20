@@ -115,7 +115,7 @@ var Transport =
 
       if (transferMode === "POST")
       {
-        xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+        xhr.setRequestHeader("Content-Type", "application/x-www-sms_form-urlencoded");
       }
 
       if (asyn)
