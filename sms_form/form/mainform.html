@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+    <title>Title</title>
+</head>
+<body>
+<style>
+    .col-center-block {
+        float: none;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .len{
+        width: 300px;
+    }
+
+</style>
+
+
+<form class="form-horizontal col-sm-offset-1 " role="form">
+    <div class="form-group">
+        <label class="col-sm-3 control-label" >
+            <h1>验证码系统</h1>
+        </label>
+    </div>
+    <div class="form-group" >
+        <label class="col-sm-1 control-label" >手机号:</label>
+        <div class="col-sm-4 ">
+            <input type="text" class="form-control" name="mobile" value="" id="mobile"/><span id="mobile_notice"></span></p>
+        </div>
+    </div>
+    <div class="form-group">
+        <label  class="col-sm-1 control-label">验证码:</label>
+        <!--<class="col-sm-10">-->
+        <div class="col-sm-3">
+            <input type="text" class="form-control" name="code" value="" id="code"/>
+        </div>
+        <button class="btn btn-default" id="Submit" onclick="do_alert()">获取</button></p>
+    </div>
+    <div class="form-group">
+        <button type="btn btn-default"  class="center-block btn btn-default"  name="yanzheng"  id="validate" onclick="do_validate()" >验证提交</button>
+    </div>
+</form>
+<!--</form>-->
+<!-- jQuery (Bootstrap 的 JavaScript 插件需要引入 jQuery) -->
+<script src="https://code.jquery.com/jquery.js"></script>
+<!-- 包括所有已编译的插件 -->
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>
+<script language="JavaScript">
+    // try{
+    //     oAjax = new XMLHttpRequest();
+    // }catch(e){
+    //     oAjax = new ActiveXObject("Microsoft.XMLHTTP");
+    // };
+    //
+    // function do_alert(){
+    //     var mobile = document.getElementById("mobile").value;
+    //
+    //     oAjax.open('get','../php/Smsmainform.php?opType=1&mobile='+mobile,true);
+    //     oAjax.send();
+    //     oAjax.onreadystatechange = function() {
+    //         //当状态为4的时候，执行以下操作
+    //         if (oAjax.readyState == 4) {
+    //             try {
+    //                 alert(oAjax.responseText);
+    //             } catch (e) {
+    //                 alert('你访问的页面出错了');
+    //             };
+    //         };
+    //     }
+    //     // alert(temp)
+    // }
+    //
+    // function do_validate()
+    // {
+    //     var code = document.getElementById("code").value;
+    //     var mobile = document.getElementById("mobile").value;
+    //
+    //     oAjax.open('get','../php/Smsmainform.php?opType=2&code='+code+'&mobile='+mobile,true);
+    //     oAjax.send();
+    //     oAjax.onreadystatechange = function() {
+    //         //当状态为4的时候，执行以下操作
+    //         if (oAjax.readyState == 4) {
+    //             try {
+    //                 // alert(oAjax.responseText);
+    //                 if(oAjax.responseText == "failed"){
+    //                     window.location = "./wrong.php";
+    //                 }else if(oAjax.responseText == "success")
+    //                 {
+    //                     window.location = "./ok.php"
+    //                 }
+    //             } catch (e) {
+    //                 alert('你访问的页面出错了');
+    //             };
+    //         };
+    //     }
+    // }
+
+
+</script>
