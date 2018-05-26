@@ -6,7 +6,7 @@ $opType = $_GET['opType'];
 //echo $opType;
 ini_set("display_errors", "on");
 
-require_once dirname(__DIR__) . '..\..\aliyun-dysms-php-sdk\api_sdk\vendor\autoload.php';
+require_once dirname(__DIR__) . '../../aliyun-dysms-php-sdk/api_sdk/vendor/autoload.php';
 
 use Aliyun\Core\Config;
 use Aliyun\Core\Profile\DefaultProfile;
